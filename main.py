@@ -8,12 +8,8 @@ def root():
     return RedirectResponse("https://drishti-ai-1.onrender.com")
 
 @app.get("/docs")
-def docs_redirect():
+def docs():
     return RedirectResponse("https://drishti-ai-szyx.onrender.com/docs")
-
-@app.get("/health")
-def health():
-    return {"status": "redirect-live"}
 
 @app.get("/{path:path}")
 def catch_all(path: str):
